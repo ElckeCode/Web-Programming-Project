@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fitness Tracker Web App - Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="Images/logo.jpg" alt="Fitness Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="log.html">LOG WORKOUT</a></li>
+                    <li><a href="favourite.html">FAVOURITE WORKOUTS</a></li>
+                    <li><a href="statistics.html">STATISTICS</a></li>
+                    <li><a href="goals.html">GOALS</a></li>
+                    <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-navicon" onclick="showMenu()"></i>
+        </nav>
+        <h1>Your Fitness Statistics</h1>
+    </section>
+
+    <section class="workout-plans">
+        <h1>Fitness Statistics We Track</h1>
+        <p>We offer a wide range of statistics to help you track and analyze your fitness progress. From your daily workouts to long-term goals, we capture all the essential data to help you improve and reach your full potential.</p>
+        <div class="row">
+            <div class="workout-journey">
+                <h3>Workout Frequency</h3>
+                <p>This statistic tracks the number of days per week you exercise, helping you understand your consistency and commitment to your fitness goals.</p>
+            </div>
+            <div class="workout-journey">
+                <h3>Calories Burned</h3>
+                <p>We track the number of calories you burn during each workout, giving you a clear picture of how your body is using energy. This helps you adjust your workouts to meet specific fitness goals, such as weight loss or muscle gain.</p>
+            </div>
+            <div class="workout-journey">
+                <h3>Workout Duration</h3>
+                <p>This statistic provides insight into the total time spent on your workouts, helping you assess whether you're pushing yourself enough or need to increase the intensity.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h1>Track Your Performance with Our Tools</h1>
+        <p>Our fitness tracker offers a variety of tools to monitor your progress and stay motivated. Whether it's your strength, endurance, or overall fitness level, we make it easy for you to see how far you've come.</p>
+        <div class="row">
+            <div class="features-track">
+                <img src="Images/calorie.jpg" alt="">
+                <h3>Strength Tracking</h3>
+                <p>Track your strength gains over time, whether it's your maximum weight lifted or improvements in bodyweight exercises. Our tools help you stay focused on increasing your strength levels.</p>
+            </div>
+            <div class="features-track">
+                <img src="Images/stepcounter.jpg" alt="">
+                <h3>Endurance Progress</h3>
+                <p>We help you monitor your endurance improvements through various metrics, including the number of reps, sets, and total workout time. Push yourself to last longer and do more each time!</p>
+            </div>
+            <div class="features-track">
+                <img src="Images/heartrate.jpg" alt="">
+                <h3>Heart Rate Monitoring</h3>
+                <p>Track your heart rate during your workouts to ensure you're training within the optimal heart rate zones. This helps improve cardiovascular fitness and monitor your intensity levels.</p>
+            </div>
+        </div>
+    </section>
+
+
+        <div class="stats-summary">
+            <div>
+                <h3>Total Workouts Logged</h3>
+                <p id="totalWorkouts">0</p>
+            </div>
+            <div>
+                <h3>Total Calories Burned</h3>
+                <p id="totalCalories">0</p>
+            </div>
+            <div>
+                <h3>Average Workout Duration (minutes)</h3>
+                <p id="avgDuration">0</p>
+            </div>
+        </div>
+
+
+        <div class="chart-container">
+            <h3>Workout Trend (Calories Burned)</h3>
+            <canvas id="workoutChart"></canvas>
+        </div>
+
+
+        <form id="workoutForm">
+            <input type="text" id="workoutType" placeholder="Workout Type" required>
+            <input type="number" id="duration" placeholder="Duration (minutes)" required>
+            <input type="number" id="calories" placeholder="Calories Burned" required>
+            <input type="date" id="date" required>
+            <button type="submit">Log Workout</button>
+        </form>
+    </div>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We are a fitness-focused community dedicated to helping individuals of all levels achieve their health and wellness goals. Our mission is to provide cutting-edge fitness tracking tools and personalized insights that keep you motivated and on track.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> for fitness lovers</p>
+    </section>
+    <div class="containerstat">
+        <h1 class="h1stat">Workout Statistics</h1>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
